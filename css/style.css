@@ -1,0 +1,335 @@
+:root {
+    --primary-color: #fcf8ec;
+    --secondary-color: #d0e8f2;
+    --tertiary-color: #79a3b1;
+    --fourth-color: #456268;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: var(--primary-color);
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn-link {
+    color: #fcf8ec;
+    background-color: #79a3b1;
+}
+
+.container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.section {
+    padding-top: 50px;
+}
+
+.section h2 {
+    margin-bottom: 50px;
+}
+
+.welcome-section {
+    min-height: 100vh;
+    background-image: url(https://i.ibb.co/nRR0Mxn/react-wallpaper.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--fourth-color);
+    justify-content: flex-end;
+    padding: 10px 20px;
+    z-index: 9999;
+}
+
+.welcome-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.welcome-section__whoiam {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.welcome-section__whoiam img {
+    height: 30vh;
+    width: auto;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.about-me h2 {
+    font-size: 2rem;
+    margin: 10px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .welcome-section h1 {
+        font-size: 4rem;
+    }
+
+    .welcome-section__whoiam {
+        padding: 50px 0;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .welcome-section__whoiam img {
+        height: 30vh;
+    }
+
+    .about-me h2 {
+        font-size: 3rem;
+        margin: 10px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .welcome-section__whoiam img {
+        height: 50vh;
+    }
+}
+
+.skill {
+    margin-top: 30px;
+}
+
+.skill .skill-info h3 {
+    color: var(--primary-color);
+}
+
+.skill .icons {
+    text-align: center;
+    font-size: 5rem;
+    padding: 20px;
+}
+
+.skill .skill-info {
+    padding: 20px;
+}
+
+.skill-basic {
+    border-left: 1px solid #e96228;
+    border-top: 1px solid #2862e9;
+    border-right: 1px solid #efd81d;
+    border-bottom: 1px solid #efd81d;
+}
+
+.skill-basic .icons {
+    border-bottom: 1px solid black;
+}
+
+.skill-basic .icons .fab.fa-html5 {
+    color: #e96228;
+}
+.skill-basic .icons .fab.fa-css3-alt {
+    color: #2862e9;
+}
+.skill-basic .icons .fab.fa-js {
+    color: #efd81d;
+    position: relative;
+}
+
+.skill-basic .icons .fab.fa-js::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 1px;
+    right: 0;
+    background-color: black;
+    width: 40px;
+    height: 30px;
+    z-index: -1;
+}
+
+.skill-basic .skill-info {
+    background: rgb(233,98,40);
+    background: linear-gradient(175deg, rgba(233,98,40,1) 10%, rgba(40,98,233,1) 25%, rgba(239,216,29,1) 35%);
+}
+
+.skill-react {
+    border: 1px solid #5ed3f3;
+}
+
+.skill-react .icons .fab.fa-react {
+    color: #5ed3f3;
+}
+
+.skill-react .skill-info {
+    background-color: #5ed3f3;
+    color: #212121;
+}
+
+.skill-node {
+    border: 1px solid #8cbe3f;
+}
+
+.skill-node .icons {
+    color: #8cbe3f;
+}
+
+.skill-node .skill-info {
+    background-color: #8cbe3f;
+    color: #42473a;
+}
+
+@media (min-width: 768px) {
+    .skills__container {
+        margin-top: 30px;
+    }
+
+    .skills__div-rotated {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .skill {
+        margin-top: 0;
+        flex: 0 1 32%;
+    }
+}
+
+@media (min-width: 992px) {
+    .skills__div-rotated {
+        height: 70vh;
+        display: grid;        
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;
+    }
+
+    .skill-basic {
+        align-self: flex-start;
+    }
+    .skill-react {
+        align-self: center;
+    }
+    .skill-node {
+        align-self: flex-end;
+    }
+}
+
+.project-tile {
+    border: 1px solid black;
+    margin-top: 30px;
+}
+
+.project-tile img {
+    height: 200px;
+}
+
+.project-tile h3 {
+    margin: 10px 0;
+}
+
+.project-tile__info p {
+    padding: 0 15px;
+}
+
+.project-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project-links a {
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.demo {
+    background-color: #e96228;
+}
+
+.repo {
+    background-color: #24292e;
+}
+
+@media (min-width: 768px) {
+    .projects-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .project-tile {
+        flex: 0 1 32%;
+    }
+}
+
+@media (min-width: 992px) {
+    .projects-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;
+    }
+}
+.footer {
+    background-color: var(--fourth-color);
+    margin-top: 50px;
+    padding: 10px 20px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    
+}
