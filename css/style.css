@@ -322,6 +322,11 @@ img {
     }
 }
 
+.form-contact {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .form-contact .field {
     display: flex;
     justify-content: space-between;
