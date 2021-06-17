@@ -1,11 +1,12 @@
-const collapseButton = document.getElementById('collapse-butto');
-const navLinks = document.getElementById('nav-links');
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementsByClassName('nav__link');
 
-collapseButton.addEventListener('click', function showNavbas(event) {
-    console.log('hola')
-    if(Array.prototype.includes.call(navLinks.classList, 'show-nav')) {
-        navLinks.classList = 'nav-links'
-    } else {
-        navLinks.classList += ' show-nav';
-    }
+navToggle.addEventListener('click', function () {
+    document.body.classList.toggle('nav-open')
+});
+
+Array.prototype.forEach.call(navLinks, link => {
+    link.addEventListener('click', function () {
+        document.body.classList.remove('nav-open')
+    })
 })
