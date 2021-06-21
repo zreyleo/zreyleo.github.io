@@ -424,12 +424,12 @@ h3 { font-size: var(--fs-h3); }
     padding: 10px 0;
     text-align: center;
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--clr-light);
     font-weight: bold;
 }
 
 .demo {
-    background-color: #e96228;
+    background-color: var(--clr-accent);
 }
 
 .repo {
